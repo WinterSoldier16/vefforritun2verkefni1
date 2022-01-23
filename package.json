@@ -1,0 +1,35 @@
+{
+  "name": "vefforritun2verkefni1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "browser-sync": "browser-sync start --server --files index.html *.css",
+    "sass": "sass styles.scss styles.css -w",
+    "lint-scss": "stylelint styles.scss ./**/*.scss",
+    "lint-css": "stylelint styles.css ./**/*.css",
+    "dev": "concurrently npm:sass npm:browser-sync"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WinterSoldier16/vefforritun2verkefni1.git"
+  },
+  "author": "Veturliði S. Gylfason",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WinterSoldier16/vefforritun2verkefni1/issues"
+  },
+  "homepage": "https://github.com/WinterSoldier16/vefforritun2verkefni1#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "cldr-data": "^36.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "globalize": "^1.7.0",
+    "stylelint": "^14.2.0",
+    "stylelint-config-standard": "^24.0.0"
+  }
+}
