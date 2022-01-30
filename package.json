@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "browser-sync": "browser-sync start --server --files index.html *.css",
+    "browser-sync": "browser-sync start --serveStatic ./dist --server --files  ./public/styles.css .dist/*.html",
     "sass": "sass styles.scss styles.css -w",
     "lint-scss": "stylelint styles.scss ./**/*.scss",
     "lint-css": "stylelint styles.css ./**/*.css",
-    "dev": "concurrently npm:sass npm:browser-sync"
+    "dev": "concurrently npm:sass npm:browser-sync",
+    "build": "node ./src/main.js",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest ./test/*.js"
   },
   "repository": {
     "type": "git",
@@ -29,10 +31,15 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.2.0",
     "globalize": "^1.7.0",
+    "jest": "^27.4.7",
+    "sass": "^1.49.0",
     "stylelint": "^14.2.0",
     "stylelint-config-standard": "^24.0.0"
   },
   "dependencies": {
-    "concurrently": "^7.0.0"
+    "concurrently": "^7.0.0",
+    "express": "^4.17.2",
+    "mathjs": "^10.1.0",
+    "globalize": "^1.7.0"
   }
 }

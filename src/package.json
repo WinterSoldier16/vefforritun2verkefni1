@@ -1,0 +1,7 @@
+{
+    "type": "module",
+    "scripts": { 
+        "browser-sync": "browser-sync start --server --files index.html *.css"
+    }   
+    
+} 
