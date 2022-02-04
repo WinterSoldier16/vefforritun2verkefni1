@@ -8,7 +8,7 @@
     "sass": "sass styles.scss styles.css -w",
     "lint-scss": "stylelint styles.scss ./**/*.scss",
     "lint-css": "stylelint styles.css ./**/*.css",
-    "lint": "eslint ./**/*.js",
+    "lint": "eslint ./**/*.js --fix",
     "dev": "concurrently npm:sass npm:browser-sync",
     "build": "node ./src/main.js",
     "test": "cross-env NODE_OPTIONS='--experimental-vm-modules' jest --coverage test/*.js"
@@ -27,6 +27,7 @@
     "browser-sync": "^2.27.7",
     "cldr-data": "^36.0.0",
     "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-node": "^11.1.0",

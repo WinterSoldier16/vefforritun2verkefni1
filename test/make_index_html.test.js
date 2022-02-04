@@ -1,13 +1,13 @@
-import { make_index_html } from '../src/make_index_html.js';
 import { readFile } from 'fs/promises';
+import { make_index_html } from '../src/make_index_html.js';
 
 describe('make_index_html.js', () => {
-    it('function creates the correct html file', async () => {
-        const dataset = 1;
-        await make_index_html(dataset);
-        var string = await readFile(`./dist/index.html`);
-        string = String (string);
-        var testString = `<!DOCTYPE html>
+  it('function creates the correct html file', async () => {
+    const dataset = 1;
+    await make_index_html(dataset);
+    let string = await readFile('./dist/index.html');
+    string = String(string);
+    let testString = `<!DOCTYPE html>
     <html lang="is">
         <head>
             <link rel="stylesheet" type="text/css" href="./public/styles.css" />
@@ -40,7 +40,7 @@ describe('make_index_html.js', () => {
             
         </body>
     </html>`;
-        testString = String (testString);
-        expect(string).toEqual(testString);
-    });
+    testString = String(testString);
+    expect(string).toEqual(testString);
+  });
 });

@@ -1,18 +1,18 @@
-import { parseNumbersFromArray } from "../lib/parser.js";
-import { fileReader } from "../lib/filereader.js";
-import { calculate } from "../lib/calculate.js";
 import { writeFile } from 'fs/promises';
+import { parseNumbersFromArray } from '../lib/parser.js';
+import { fileReader } from '../lib/filereader.js';
+import { calculate } from '../lib/calculate.js';
 
 export async function make_dataset_html(dataset) {
-    var arr = await fileReader(dataset);
-    arr = parseNumbersFromArray(arr);
-    if (arr.length > 0) {
-        var results = calculate(arr);
-    }
-    const filename = `dataset${dataset}.html`;
-
-    if (arr.length > 0) {
-        var data = `<!DOCTYPE html>
+  let arr = await fileReader(dataset);
+  arr = parseNumbersFromArray(arr);
+  if (arr.length > 0) {
+    var results = calculate(arr);
+  }
+  const filename = `dataset${dataset}.html`;
+  var data = ``;
+  if (arr.length > 0) {
+    data = `<!DOCTYPE html>
     <html lang="is">
         <head>
             <link rel="stylesheet" type="text/css" href="./styles.css"/>
@@ -30,7 +30,7 @@ export async function make_dataset_html(dataset) {
                     Niðurstöður:
                 </h2>
                     <div class="resultbox">
-                        ${Object.entries(results).map(entry => "<div class=\"result\">" + entry[0] + ": " + entry[1] + "</div>").join('\n')}
+                        ${Object.entries(results).map((entry) => `<div class="result">${entry[0]}: ${entry[1]}</div>`).join('\n')}
                     </div>
                 </div>
                 <div class="data">
@@ -43,9 +43,9 @@ export async function make_dataset_html(dataset) {
                 </div>
             </div>
         </body>
-    </html>`
-    } else {
-        var data = `<!DOCTYPE html>
+    </html>`;
+  } else {
+    data = `<!DOCTYPE html>
     <html lang="is">
         <head>
             <link rel="stylesheet" type="text/css" href="./styles.css"/>
@@ -59,13 +59,12 @@ export async function make_dataset_html(dataset) {
                 <a href="./index.html">Smelltu hér til að fara til baka á forsíðu</a>
             </header>
         </body>
-    </html>`
-    }
+    </html>`;
+  }
 
-    try {
-        const outcome = await writeFile(`./dist/${filename}`, data, {flag : 'w'});
-    } catch (e) {
-        console.error(`Failed to create ${filename}`, e);
-    }
-    
+  try {
+    const outcome = await writeFile(`./dist/${filename}`, data, { flag: 'w' });
+  } catch (e) {
+    console.error(`Failed to create ${filename}`, e);
+  }
 }
