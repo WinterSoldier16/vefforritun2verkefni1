@@ -10,7 +10,7 @@
     "lint-css": "stylelint styles.css ./**/*.css",
     "dev": "concurrently npm:sass npm:browser-sync",
     "build": "node ./src/main.js",
-    "test": "NODE_OPTIONS='--experimental-vm-modules' jest ./test/*.js"
+    "test": "cross-env NODE_OPTIONS='--experimental-vm-modules' jest --coverage test/*.js"
   },
   "repository": {
     "type": "git",
@@ -38,8 +38,10 @@
   },
   "dependencies": {
     "concurrently": "^7.0.0",
+    "cross-env": "^7.0.3",
     "express": "^4.17.2",
-    "mathjs": "^10.1.0",
-    "globalize": "^1.7.0"
-  }
+    "globalize": "^1.7.0",
+    "mathjs": "^10.1.0"
+  },
+  "packageManager": "yarn@3.1.1"
 }

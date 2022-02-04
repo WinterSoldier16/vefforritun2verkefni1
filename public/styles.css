@@ -1,13 +1,22 @@
 /* Setjum inn „reset“ sem fjarlægir margin og padding af öllu */
-* {
+/* * {
     margin: 0;
     padding: 0;
-  }
+  } */
   
   /* Reiknum stærð á öllum boxum sem border-box */
   html {
     box-sizing: border-box;
   }
+
+  * {
+    font-family: "Lucida Console", "Monaco", "Courier New", monospace;
+    background-color: rgb(65, 65, 65);
+    color: whitesmoke;
+  }
+
+  
+
   /* og látum erfast á allt */
   *, *:before, *:after {
     box-sizing: inherit;
@@ -15,5 +24,67 @@
 
   :root {
     --spacing: 1rem;
+  }
+
+  h1 {
+    padding-bottom: 3rem;
+    text-align: center;
+  }
+
+  .datasets {
+    border: 2px solid purple;
+    background-color: #303030;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex: row;
+    width:fit-content;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .dataset {
+    border: 2px solid purple;
+    padding: 1rem;
+    margin: 1rem;
+    flex-basis: auto;
+    background-color: rgba(102, 51, 153, 1);
+    background-color: rgb(150, 70, 210);
+    background-image: linear-gradient(rgb(100, 0, 100) 0%, rgb(150, 70, 210) 74%);
+    border-radius: 5px;
+    color: gold;
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+  }
+
+  .dataset:hover {
+    background-color: rgb(150, 70, 210);
+    background-image: none;
+  }
+
+  .dataset:active {
+    background-color: rgb(150, 70, 210);
+    background-image: linear-gradient(rgb(100, 0, 100) 0%, rgb(150, 70, 210) 74%);
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+  }
+
+  .resultbox {
+    display: flex;
+    flex-wrap: wrap;
+    overflow:inherit;
+    border: 3px solid rgb(100, 0, 100);
+  }
+
+  .result {
+    margin-right: 80%;
+    padding-right: 80%;
+    flex-direction:column;
+    max-width:max-content;
+    /* background-color: #302244;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1; */
+    /* height: 200px; */
   }
   
