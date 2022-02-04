@@ -1,6 +1,6 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-sass-guidelines"]
-  rules {
+  "extends": ["stylelint-config-standard"],
+  "rules": {
       "color-no-invalid-hex": true,
       "max-empty-lines": 2,
       "selector-class-pattern": null

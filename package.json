@@ -42,6 +42,5 @@
     "express": "^4.17.2",
     "globalize": "^1.7.0",
     "mathjs": "^10.1.0"
-  },
-  "packageManager": "yarn@3.1.1"
+  }
 }
