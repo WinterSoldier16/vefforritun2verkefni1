@@ -10,7 +10,7 @@ describe('make_index_html.js', () => {
         var testString = `<!DOCTYPE html>
     <html lang="is">
         <head>
-            <link rel="stylesheet" type="text/css" href="../public/styles.css" />
+            <link rel="stylesheet" type="text/css" href="./public/styles.css" />
             <meta charset="utf-8" />
             <title>Verkefni 1: Gagnavinnsla</title>
         </head>
