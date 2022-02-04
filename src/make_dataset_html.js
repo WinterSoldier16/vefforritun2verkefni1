@@ -15,7 +15,7 @@ export async function make_dataset_html(dataset) {
         var data = `<!DOCTYPE html>
     <html lang="is">
         <head>
-            <link rel="stylesheet" type="text/css" href="./styles/styles.css"/>
+            <link rel="stylesheet" type="text/css" href="../styles/styles.css"/>
             <meta charset="utf-8" />
             <title>Gagnasett ${dataset}</title>
         </head>
@@ -48,7 +48,7 @@ export async function make_dataset_html(dataset) {
         var data = `<!DOCTYPE html>
     <html lang="is">
         <head>
-            <link rel="stylesheet" type="text/css" href="./styles/styles.css"/>
+            <link rel="stylesheet" type="text/css" href="../styles/styles.css"/>
             <meta charset="utf-8" />
             <title>Gagnasett ${dataset}</title>
         </head>
