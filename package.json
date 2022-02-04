@@ -30,7 +30,6 @@
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.2.0",
-    "globalize": "^1.7.0",
     "jest": "^27.4.7",
     "sass": "^1.49.0",
     "stylelint": "^14.2.0",
@@ -40,7 +39,6 @@
     "concurrently": "^7.0.0",
     "cross-env": "^7.0.3",
     "express": "^4.17.2",
-    "globalize": "^1.7.0",
     "mathjs": "^10.1.0"
   }
 }
